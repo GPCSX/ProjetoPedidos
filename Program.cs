@@ -5,6 +5,7 @@ namespace ProjetoPedidos
 {
     public class Program
     {
+        private static readonly Random _random = new Random();
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -33,6 +34,10 @@ namespace ProjetoPedidos
             app.MapControllers();
 
             app.Run();
+        }
+        public static Random GetRandom()
+        {
+            return _random;
         }
     }
 }

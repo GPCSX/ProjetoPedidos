@@ -17,7 +17,6 @@ namespace ProjetoPedidos.Services
                 throw new ArgumentException("O pedido deve conter pelo menos um item.");
             }
 
-            // Criar o objeto Pedido com os dados fornecidos
             var pedido = new Pedido
             {
                 NumeroPedido = GerarNumeroPedido(),
@@ -26,18 +25,12 @@ namespace ProjetoPedidos.Services
                 Itens = itens
             };
 
-            // Realizar qualquer lógica adicional necessária (ex: cálculo de valores, validações adicionais, etc.)
-            // Por exemplo, poderíamos calcular o valor total do pedido aqui se necessário:
-            // pedido.ValorTotal = pedido.CalcularValorTotal();
 
             return pedido;
         }
 
         private int GerarNumeroPedido()
         {
-            // Aqui poderíamos implementar a lógica para gerar um número de pedido único,
-            // como gerar um número aleatório ou buscar o próximo número disponível no banco de dados.
-            // Por simplicidade, retornaremos um número fixo neste exemplo.
             return 1001;
         }
     }
